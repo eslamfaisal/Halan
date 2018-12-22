@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:drawme="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_login_background_shap">
+
+    <ScrollView
+        android:id="@+id/login_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.rafakob.drawme.DrawMeTextView
+                    drawme:dm_backColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="24dp"
+                    android:layout_marginBottom="36dp"
+                    android:text="@string/login"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="16dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/ic_edit_text_background_shape">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_icon_background_shape"
+                        android:padding="8dp"
+                        android:src="@drawable/mail" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@color/white"
+                        android:gravity="start"
+                        android:hint="@string/email"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textAlignment="viewStart" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/ic_edit_text_background_shape">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_icon_background_shape"
+                        android:padding="10dp"
+                        android:src="@drawable/pass_icon" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="@color/white"
+                        android:gravity="start"
+                        android:hint="@string/password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textAlignment="viewStart" />
+
+                </LinearLayout>
+
+                <com.rafakob.drawme.DrawMeButton
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="70dp"
+                    android:layout_marginBottom="36dp"
+                    android:text="@string/login"
+                    android:textColor="@color/white"
+                    drawme:dm_backColor="@color/colorPrimary"
+                    drawme:dm_backColorDisabled="@color/colorPrimary"
+                    drawme:dm_backColorPressed="@color/green"
+                    drawme:dm_radius="16dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_below="@id/login_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <com.rafakob.drawme.DrawMeButton
+            android:id="@+id/forget_pass"
+            fontPath="fonts/AraHamahAlislam-Regular.ttf"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/forgot_password"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.rafakob.drawme.DrawMeButton
+            android:id="@+id/new_account"
+            fontPath="fonts/AraHamahAlislam-Regular.ttf"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/new_account"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/colorPrimary">
+
+
+    <com.github.glomadrian.materialanimatedswitch.MaterialAnimatedSwitch
+        android:id="@+id/driver_state"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginEnd="14dp"
+        app:ball_press_color="@color/md_green_500"
+        app:ball_release_color="@color/md_deep_orange_500"
+        app:base_press_color="@color/md_green_900"
+        app:base_release_color="@color/md_deep_orange_900"
+        app:icon_press="@drawable/ic_location_on_black_24dp"
+        app:icon_release="@drawable/ic_offline" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_marginEnd="16dp"
+        android:layout_toStartOf="@id/driver_state"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:id="@+id/driver_state_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/offline" />
+
+    <ImageView
+        android:id="@+id/chat_room_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

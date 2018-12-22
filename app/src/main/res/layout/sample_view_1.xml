@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.rafakob.drawme.DrawMeButton
+            android:gravity="center"
+            android:drawablePadding="16dp"
+            android:padding="16dp"
+            android:drawableStart="@drawable/ic_my_location_marker"
+            xmlns:drawme="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/go_arrival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/direction_to_client_location"
+            android:textColor="@color/white"
+            drawme:dm_backColor="@color/green"
+            drawme:dm_backColorPressed="@color/gray"
+            drawme:dm_radius="8dp" />
+        <com.rafakob.drawme.DrawMeButton
+            android:id="@+id/go_receiver"
+            android:gravity="center"
+            android:drawablePadding="16dp"
+            android:padding="16dp"
+            android:drawableStart="@drawable/ic_location_on_black_24dp"
+            xmlns:drawme="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/direction_to_arrival"
+            android:textColor="@color/white"
+            drawme:dm_backColor="@color/green"
+            drawme:dm_backColorPressed="@color/progress_bg"
+            drawme:dm_radius="8dp" />
+        <com.rafakob.drawme.DrawMeButton
+            android:id="@+id/go_main"
+            android:gravity="center"
+            android:drawablePadding="16dp"
+            android:padding="16dp"
+            xmlns:drawme="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/back_to_main"
+            android:textColor="@color/white"
+            drawme:dm_backColor="@color/colorPrimary"
+            drawme:dm_backColorPressed="@color/green"
+            drawme:dm_radius="8dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

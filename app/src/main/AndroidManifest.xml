@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fekrah.halan">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Required to check whether user has network connection or not -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Dangerous Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAnKvay92-zyf4Or37UL6tsEF7BL8PiC6U" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MainActivityB"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".customer.places.PlacesActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".customer.CustomerMainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".common.activities.ResetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".common.activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".common.activities.LoginActivity"
+            android:label="@string/login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".customer.activities.RegisterUserActivity"
+            android:label="@string/register"
+            android:parentActivityName=".common.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".common.activities.SampleActivity" />
+        <activity
+            android:name=".customer.activities.CurrentOrderActivity"
+            android:label="@string/current_trip"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".driver.activities.MainActivityDriver"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".driver.activities.RegisterActivityDriver"
+            android:label="@string/register"
+            android:parentActivityName=".common.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/UCrop" />
+        <activity
+            android:name=".driver.activities.LoginActivityDriver"
+            android:label="@string/login_as_driver"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".driver.FloatingService"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".driver.activities.ChatDriverActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".driver.activities.ChatsRoomsDriverActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".driver.activities.ReceiptOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.activities.ChatsRoomsActivity"
+            android:label="@string/chats"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".customer.activities.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".driver.activities.OldOrdersDriverActivity"
+            android:label="@string/old_orders" />
+        <activity
+            android:name=".customer.activities.MyOrdersActivity"
+            android:label="@string/title_activity_my_orders"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+    </application>
+
+</manifest>

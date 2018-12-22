@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "198992939261",
+    "firebase_url": "https://halan-b980c.firebaseio.com",
+    "project_id": "halan-b980c",
+    "storage_bucket": "halan-b980c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198992939261:android:02bb94aa48f0e3bd",
+        "android_client_info": {
+          "package_name": "com.fekrah.halan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198992939261-lgmtsk2t310r79cdn266bpo0nt9p0a8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fekrah.halan",
+            "certificate_hash": "7c3fb044b6d97df030451eb234ab2059b5d6521a"
+          }
+        },
+        {
+          "client_id": "198992939261-3ol23tl07p6c1rbt8r43uij7b1s5u1hh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4j6314DcYLg2P3TfUjF2WG728r6DuqCE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198992939261-3ol23tl07p6c1rbt8r43uij7b1s5u1hh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

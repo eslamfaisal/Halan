@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".places.PlacesActivity">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/appbar"
+        android:id="@+id/places_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:id="@+id/view_search_tint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        android:visibility="gone"
+        android:background="#88000000"
+        android:alpha="0.0"
+        android:layerType="hardware"/>
+
+    <org.cryse.widget.persistentsearch.PersistentSearchView
+        android:layout_width="match_parent"
+        android:id="@+id/searchview"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:elevation="6dp"
+        app:persistentSV_displayMode="menuItem"
+        app:persistentSV_searchTextColor="#DE000000"
+        app:persistentSV_editTextColor="#DE000000"
+        app:persistentSV_editHintText="@string/nearby_places"
+        app:persistentSV_editHintTextColor="#61000000"
+        app:persistentSV_searchCardElevation="4dp"
+        app:persistentSV_customToolbarHeight="56dp"/>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/empty_places"
+        android:visibility="gone"
+        android:text="@string/no_places"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

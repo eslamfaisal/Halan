@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/task_room_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/task_room_image"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Eslam Faisal"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/task_room_image" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/task_room_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        fresco:placeholderImage="@drawable/ic_dummy_user"
+        fresco:progressBarAutoRotateInterval="1000"
+        fresco:progressBarImage="@drawable/ic_refresh_black_24dp"
+        fresco:progressBarImageScaleType="centerInside"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="@color/white"
+        fresco:roundingBorderWidth="1dp"/>
+
+    <ImageView
+        android:id="@+id/chat_room_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+
+
+</RelativeLayout>

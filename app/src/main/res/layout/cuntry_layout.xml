@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_margin="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:layout_height="150dp">
+
+    <com.rafakob.drawme.DrawMeButton
+        android:layout_margin="8dp"
+        android:id="@+id/egypt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="24sp"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:text="@string/egypt"/>
+    <View
+        android:background="@color/black_text_color"
+        android:layout_width="350dp"
+        android:layout_height="1dp"/>
+    <com.rafakob.drawme.DrawMeButton
+        android:layout_margin="8dp"
+        android:id="@+id/saudia"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/saudi_arabia"/>
+
+</LinearLayout>

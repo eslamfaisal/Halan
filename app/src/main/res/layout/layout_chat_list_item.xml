@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="8dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/room_chat_image"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        fresco:elevation="16dp"
+        fresco:placeholderImage="@drawable/ic_dummy_user"
+        fresco:progressBarAutoRotateInterval="1000"
+        fresco:progressBarImage="@drawable/ic_refresh_black_24dp"
+        fresco:progressBarImageScaleType="centerInside"
+        fresco:roundAsCircle="true" />
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/room_chat_image"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/room_chat_image">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/room_chat_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                tools:text="eslam faisal" />
+
+            <TextView
+                android:id="@+id/room_chat_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@android:color/black"
+                tools:text="3:50"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:id="@+id/room_chat_last_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

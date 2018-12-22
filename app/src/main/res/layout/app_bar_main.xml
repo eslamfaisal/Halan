@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="55dp"
+    sothree:umanoParallaxOffset="100dp"
+    sothree:umanoScrollableView="@+id/container"
+    sothree:umanoShadowHeight="4dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        tools:context=".activities.MainActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/no_inter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appbar"
+            android:background="@android:color/holo_red_dark"
+            android:gravity="center"
+            android:text="@string/no_internet_connection"
+            android:textColor="@android:color/white">
+
+        </TextView>
+        <LinearLayout
+            android:id="@+id/pick_locations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/no_inter"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/search_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_magnify"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_my_location_black_24dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@+id/ic_magnify"
+                    android:layout_toRightOf="@+id/ic_magnify"
+                    android:background="@drawable/white_border"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/receiver_place_actv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:hint="@string/receiver_place"
+                        android:imeOptions="actionSearch"
+                        android:text="@string/my_location"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/ic_close" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/search_place2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_magnify2"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_location_on_white" />
+
+                <LinearLayout
+                    android:id="@+id/arrival_place_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:layout_toEndOf="@+id/ic_magnify2"
+                    android:layout_toRightOf="@+id/ic_magnify2"
+                    android:background="@drawable/white_border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/arrival_place_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/arrival_area"
+                        android:shadowColor="@color/black"
+                        android:textColor="#FFFFFF"
+                        android:textColorHighlight="@color/black"
+                        android:textColorHint="#FFFFFF"
+                        android:textColorLink="@color/black"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/ic_close" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/pick_locations"
+            tools:context=".activities.MainActivity" />
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/go_map"
+            android:layout_width="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="70dp"
+            android:background="@drawable/ic_edit_text_background_shape"
+            android:padding="8dp"
+            android:src="@drawable/ic_near_places_icon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        android:focusable="false"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:max="100"
+            android:progress="0"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_above="@+id/bottom_header_relativelayout"
+            />
+
+        <LinearLayout
+            android:id="@+id/main_panel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:visibility="gone">
+
+
+                <com.github.glomadrian.materialanimatedswitch.MaterialAnimatedSwitch
+                    android:id="@+id/driver_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:ball_press_color="@color/md_green_500"
+                    app:ball_release_color="@color/md_deep_orange_500"
+                    app:base_press_color="@color/md_green_900"
+                    app:base_release_color="@color/md_deep_orange_900"
+                    app:icon_press="@drawable/ic_location_on_black_24dp"
+                    app:icon_release="@drawable/ic_offline" />
+
+                <TextView
+                    android:id="@+id/driver_state_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/offline" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/order_state_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/no_orders_yet"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

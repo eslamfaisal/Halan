@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    tools:ignore="RtlHardcoded"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_marginStart="5dp"
+        android:id="@+id/photo_image_view_of_message_to_me"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:maxHeight="500dp"
+        fresco:backgroundImage="@color/gray"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundedCornerRadius="20dp"
+        fresco:roundingBorderColor="#C6C6C6"
+        fresco:roundingBorderWidth="1dp" />
+
+    <TextView
+        android:id="@+id/message_text_view_of_message_tome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/ic_text_background_to_me"
+        android:padding="8dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        tools:text="Message ro eslam faisal ali emara " />
+
+    <TextView
+        android:visibility="gone"
+        android:textSize="12sp"
+        android:id="@+id/message_time_to_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/message_text_view_of_message_tome"
+        android:layout_marginStart="8dp"
+        tools:text="30 menutes" />
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ic_edit_text_background_shape"
+            android:drawableStart="@drawable/ic_cart"
+            android:drawablePadding="16dp"
+            android:gravity="center"
+            android:id="@+id/purchases_cost"
+            android:hint="@string/purchases_cost_in_sr"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="16dp"
+            android:textAlignment="viewStart"
+            tools:ignore="RtlCompat" />
+
+
+        <EditText
+            android:id="@+id/delivery_cost"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ic_edit_text_background_shape"
+            android:drawableStart="@drawable/ic_car_color"
+            android:drawablePadding="16dp"
+            android:gravity="center"
+            android:hint="@string/delivery_cost_in_sr"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="16dp"
+            android:textAlignment="viewStart"
+            tools:ignore="RtlCompat" />
+
+
+        <LinearLayout
+            android:id="@+id/receipt_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ic_edit_text_background_shape"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/white"
+                android:drawableStart="@drawable/ic_mms_black_24dp"
+                android:drawablePadding="16dp"
+                android:gravity="center_vertical"
+                android:hint="@string/receipt_picture"
+                android:maxLines="1" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/receipt_picture"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                fresco:backgroundImage="@color/gray"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true"
+                fresco:roundedCornerRadius="8dp"
+                fresco:roundingBorderColor="@color/colorPrimary"
+                fresco:roundingBorderWidth="1dp" />
+        </LinearLayout>
+
+        <com.rafakob.drawme.DrawMeButton
+            xmlns:drawme="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/send_receipt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/send_receipt"
+            android:textColor="@color/white"
+            drawme:dm_backColor="@color/colorPrimary"
+            drawme:dm_backColorDisabled="@color/colorPrimary"
+            drawme:dm_backColorPressed="@color/green"
+            drawme:dm_radius="16dp" />
+    </LinearLayout>
+</ScrollView>

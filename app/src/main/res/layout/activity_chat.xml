@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/chat_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay"
+        android:visibility="visible">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:visibility="visible"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/chat_tool_bar">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/friend_chat_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/card_view">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:layout_toStartOf="@id/frame"
+            android:layout_toLeftOf="@id/frame"
+            android:elevation="16dp"
+            card_view:cardCornerRadius="24dp"
+            tools:ignore="UnusedAttribute">
+
+            <EditText
+                android:id="@+id/chat_input_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/ic_button_shape_light"
+                android:hint="@string/write_message"
+                android:maxLines="4"
+                android:padding="12dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_send_message"
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_send_black_24dp"
+                android:visibility="gone"
+                app:fab_elevationCompat="4dp" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_send_image"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_image_black_24dp"
+                app:fab_elevationCompat="4dp" />
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
+
