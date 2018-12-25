@@ -108,6 +108,7 @@ public class SamplePresenter {
 
     public interface SampleView {
 
+
         String getText();
 
         void setText(String text);

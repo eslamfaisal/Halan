@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".common.SendComplaintActivity">
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:background="@drawable/ic_edit_text_grey_background_shape"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:drawablePadding="8dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:layout_margin="12dp"
+            android:drawableStart="@drawable/ic_account_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:background="@drawable/ic_edit_text_grey_background_shape"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:drawablePadding="8dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="@string/email"
+            android:textColor="@color/black"
+            android:layout_margin="12dp"
+            android:drawableStart="@drawable/ic_email_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:background="@drawable/ic_edit_text_grey_background_shape"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:drawablePadding="8dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="@string/subject"
+            android:textColor="@color/black"
+            android:layout_margin="12dp"
+            android:drawableStart="@drawable/ic_edit_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:background="@drawable/ic_edit_text_grey_background_shape"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:drawablePadding="8dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="@string/write_message"
+            android:textColor="@color/black"
+            android:layout_margin="12dp"
+            android:drawableStart="@drawable/ic_edit_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.rafakob.drawme.DrawMeButton
+        xmlns:drawme="http://schemas.android.com/apk/res-auto"
+        android:textSize="22dp"
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="36dp"
+        android:text="@string/send"
+        android:textColor="@color/white"
+        drawme:dm_backColor="@color/colorPrimary"
+        drawme:dm_backColorDisabled="@color/colorPrimary"
+        drawme:dm_backColorPressed="@color/green"
+        drawme:dm_radius="16dp" />
+</LinearLayout>

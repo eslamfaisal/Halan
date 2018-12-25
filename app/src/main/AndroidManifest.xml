@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.fekrah.halan">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <!-- Required to check whether user has network connection or not -->
@@ -31,14 +32,10 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".MainActivityB"
-            android:label="@string/app_name" />
-        <activity
             android:name=".customer.places.PlacesActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".customer.CustomerMainActivity"
-            android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".common.activities.ResetPassword"
@@ -74,7 +71,7 @@
             android:name=".driver.activities.MainActivityDriver"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".driver.activities.RegisterActivityDriver"
             android:label="@string/register"
@@ -98,7 +95,7 @@
         <activity
             android:name=".driver.activities.ChatDriverActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".driver.activities.ChatsRoomsDriverActivity"
             android:screenOrientation="portrait"
@@ -110,18 +107,29 @@
             android:name=".customer.activities.ChatsRoomsActivity"
             android:label="@string/chats"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".customer.activities.ChatActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".driver.activities.OldOrdersDriverActivity"
             android:label="@string/old_orders" />
         <activity
             android:name=".customer.activities.MyOrdersActivity"
-            android:label="@string/title_activity_my_orders"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".common.MoreDetailsActivity"
+            android:label="@string/contacts"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".common.WebViewActivity" />
+        <activity
+            android:name=".common.activities.MyAccountActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".common.SendComplaintActivity" />
+        <activity android:name=".common.activities.PaymentActivity" />
+        <activity android:name=".customer.activities.CustomerNotificationActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

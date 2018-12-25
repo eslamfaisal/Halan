@@ -1,14 +1,7 @@
 <resources>
     <string name="app_name">حالا</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="navigation_drawer_open" translatable="false">Alriad gadah bank</string>
+    <string name="navigation_drawer_close" translatable="false">a</string>
     <string name="getting_locations">Gitting location...</string>
     <string name="time_just_now">just now</string>
     <string name="time_a_minute">a minute</string>
@@ -33,8 +26,6 @@
     <string name="saudi_arabia">Saudi Arabia</string>
     <string name="my_location">My location</string>
     <string name="send_order">Send Order</string>
-
-
     <string name="login">LogIn</string>
     <string name="new_account">New Account</string>
     <string name="forgot_password">Forgot Password</string>
@@ -131,19 +122,12 @@
     <string name="trip_details">Trip Details</string>
     <string name="trip_cost">Trip Cost :</string>
     <string name="do_finish_order">Do you want to  finish th order</string>
-    <string name="title_activity_driver_main">DriverMainActivity</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-
-    <string name="action_example">Example action</string>
     <string name="new_order">New Order</string>
     <string name="charge_balance">Please recharge the balance</string>
     <string name="finish">Finish</string>
     <string name="order_refused">Order refused</string>
     <string name="online">Online</string>
     <string name="offline">Offline</string>
-    <string name="accept_offer">Accept offer</string>
     <string name="direction_to_client_location">Driection to the client</string>
     <string name="direction_to_arrival">Direction to Arrival</string>
     <string name="back_to_main">back to main</string>
@@ -185,11 +169,31 @@
     <string name="my_account">My account</string>
     <string name="my_orders">My Orders</string>
     <string name="title_notifications">Notifications</string>
-    <string name="title_activity_my_orders">MyOrdersActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="tab_text_3">Tab 3</string>
-    <string name="section_format">Hello World from section: %1$d</string>
     <string name="finished_orders">Finished orders</string>
     <string name="canceled_order">Canceled orders</string>
+    <string name="contacts">Contacts</string>
+    <string name="instagram_account">Instagram account</string>
+    <string name="snapchat_account">SnapChat account</string>
+    <string name="twitter_account">Twitter account</string>
+    <string name="facebook_account">Facebook account</string>
+    <string name="Bank_accounts">Bank accounts</string>
+    <string name="services_account">Services account</string>
+    <string name="account_iban">Account IBAN</string>
+    <string name="saudi_arabia_bank">Saudi arabia bank</string>
+    <string name="account_number">Account number</string>
+    <string name="saudi_bank">Sudia bank</string>
+    <string name="alriad_bank">Alriad bank</string>
+    <string name="alriad_gada_bank">alriad_gada_bank</string>
+    <string name="alriad__gada_bank">Alriad gadah bank</string>
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="send_complain">Send complaint</string>
+    <string name="payment">Payment</string>
+    <string name="privacy">Privacy</string>
+    <string name="info">About</string>
+    <string name="help">Help</string>
+    <string name="subject">Subject</string>
+    <string name="send">Send</string>
+    <string name="please_sign_in_first">Please sign in first</string>
+
+
 </resources>

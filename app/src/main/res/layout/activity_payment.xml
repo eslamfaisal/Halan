@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".common.activities.PaymentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_edit_text_grey_background_shape"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <EditText
+                android:id="@+id/article_edt"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="اكتب شئ"
+                android:maxLines="4" />
+
+            <ImageView
+                android:id="@+id/article_add_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_image_black_24dp"
+                tools:ignore="VectorDrawableCompat" />
+        </LinearLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/article_img"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="16dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            fresco:backgroundImage="@color/gray"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundedCornerRadius="20dp"
+            fresco:roundingBorderColor="@color/colorPrimary"
+            fresco:roundingBorderWidth="1dp" />
+
+
+        <com.rafakob.drawme.DrawMeButton
+            xmlns:drawme="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/addarticleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="16dp"
+            android:text="ارسال الفتورة"
+            android:textColor="@color/white"
+            drawme:dm_backColor="@color/colorPrimary"
+            drawme:dm_backColorDisabled="@color/colorPrimary"
+            drawme:dm_backColorPressed="@color/green"
+            drawme:dm_radius="16dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

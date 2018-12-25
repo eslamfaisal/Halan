@@ -6,6 +6,10 @@
     <group android:checkableBehavior="single">
 
         <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_account_grey"
+            android:title="@string/my_account" />
+        <item
             android:id="@+id/nav_chats"
             android:icon="@drawable/ic_message_black_24dp"
             android:title="@string/chats" />
@@ -15,15 +19,9 @@
             android:title="@string/old_orders"/>
 
         <item
-            android:id="@+id/nav_edit"
-            android:icon="@drawable/ic_edit_black_24dp"
-            android:title="@string/edit_profile" />
-
-        <item
-
-            android:id="@+id/nave_balance"
-            android:icon="@drawable/ic_balance"
-            android:title="@string/balance" />
+            android:id="@+id/nav_more"
+            android:icon="@drawable/ic_more"
+            android:title="@string/more" />
         <item
             android:id="@+id/nav_log_out"
             android:icon="@drawable/ic_log_out"

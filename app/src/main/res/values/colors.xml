@@ -15,14 +15,11 @@
     <color name="grey_user_panel_background">#F9FAFC</color>
     <color name="grey_user_panel_text">#ABB4BE</color>
     <color name="grey_divider">#45ABB4BE</color>
-
     <!-- App customization -->
     <color name="theme">#000000</color>
-
     <!-- Button Customization -->
     <color name="button_text_color">#ffffff</color>
     <color name="transparent">#00000000</color>
-
     <!-- Navigation drawer Customization-->
     <color name="nav_header">#000000</color>
     <color name="nav_body">#ffffff</color>
@@ -44,21 +41,15 @@
     <color name="status_bg">#F1EEF7</color>
     <color name="view_bg">#D8D7D8</color>
     <color name="gray">#E4E4E4</color>
-
     <color name="colorGreen">#80B52B</color>
     <color name="colorGreenDark">#162303</color>
     <color name="colorBlue">#1089ec</color>
     <color name="colorYellow">#f5e100</color>
-
     <color name="target_place_back_color">#7c7c7c</color>
     <color name="receiver_place_back_color">#3b3b3b</color>
-
-
-
     <color name="md_deep_orange_900">#BF360C</color>
     <color name="md_deep_orange_50">#FBE9E7</color>
     <color name="md_deep_orange_500">#FF5722</color>
-
     <color name="md_green_900">#1B5E20</color>
     <color name="md_green_50">#E8F5E9</color>
     <color name="md_green_500">#4CAF50</color>

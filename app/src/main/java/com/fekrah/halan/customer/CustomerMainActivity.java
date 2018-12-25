@@ -43,11 +43,15 @@ import com.akexorcist.googledirection.model.Route;
 import com.akexorcist.googledirection.util.DirectionConverter;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.fekrah.halan.R;
+import com.fekrah.halan.common.MoreDetailsActivity;
 import com.fekrah.halan.common.SamplePresenter;
 import com.fekrah.halan.common.activities.LoginActivity;
+import com.fekrah.halan.common.activities.MyAccountActivity;
 import com.fekrah.halan.customer.activities.ChatsRoomsActivity;
 import com.fekrah.halan.customer.activities.CurrentOrderActivity;
+import com.fekrah.halan.customer.activities.CustomerNotificationActivity;
 import com.fekrah.halan.customer.activities.MyOrdersActivity;
+import com.fekrah.halan.customer.adapters.CustomerNotificationAdapter;
 import com.fekrah.halan.customer.places.PlacesActivity;
 import com.fekrah.halan.customer.places.Results;
 import com.fekrah.halan.driver.activities.LoginActivityDriver;
@@ -143,13 +147,17 @@ public class CustomerMainActivity extends LocationBaseActivity implements OnMapR
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_more:
-                    //   mTextMessage.setText(R.string.title_home);
+                    startActivity(new Intent(getApplicationContext(), MoreDetailsActivity.class));
                     return true;
                 case R.id.navigation_orders:
                     startActivity(new Intent(getApplicationContext(), MyOrdersActivity.class));
                     return true;
+                case R.id.navigation_account:
+                    Intent intent = new Intent(getApplicationContext(), MyAccountActivity.class);
+                    startActivity(intent);
+                    return true;
                 case R.id.navigation_notifications:
-                    //    mTextMessage.setText(R.string.title_notifications);
+                    startActivity(new Intent(getApplicationContext(), CustomerNotificationActivity.class));
                     return true;
             }
             return false;

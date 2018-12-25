@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".common.MoreDetailsActivity">
+
+    <TextView
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black_text_color"
+        android:text="@string/contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/ic_black_call"
+                android:layout_margin="8dp"
+                android:textColor="@color/black_text_color"
+                android:text="966539044145"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:onClick="goWeb"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:drawableStart="@drawable/ic_twitter"
+                    android:drawablePadding="8dp"
+                    android:text="@string/twitter_account"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:onClick="goWeb"
+
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:drawableStart="@drawable/ic_facebook"
+                    android:drawablePadding="8dp"
+                    android:text="@string/facebook_account"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:onClick="goWeb"
+
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:drawableStart="@drawable/ic_instagram"
+                    android:drawablePadding="8dp"
+                    android:text="@string/instagram_account"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:onClick="goWeb"
+
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:drawableStart="@drawable/ic_snapchat"
+                    android:drawablePadding="8dp"
+                    android:text="@string/snapchat_account"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black_text_color"
+        android:text="@string/Bank_accounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_margin="16dp"
+                        android:text="@string/services_account"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="@string/account_iban"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="2147483647"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="@string/saudi_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="@string/account_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="213123213"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_margin="16dp"
+                        android:text="@string/services_account"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="@string/account_iban"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="78685564"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="@string/alriad_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="@string/account_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="2147483647"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_margin="16dp"
+                        android:text="@string/services_account"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="@string/account_iban"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="324234324"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="@string/alriad__gada_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="@string/account_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="432432"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

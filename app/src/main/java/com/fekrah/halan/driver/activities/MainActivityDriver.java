@@ -72,7 +72,10 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.fekrah.halan.R;
+import com.fekrah.halan.common.MoreDetailsActivity;
 import com.fekrah.halan.common.SamplePresenter;
+import com.fekrah.halan.common.activities.MyAccountActivity;
+import com.fekrah.halan.common.activities.PaymentActivity;
 import com.fekrah.halan.common.activities.SplashActivity;
 import com.fekrah.halan.driver.DissconnectService;
 import com.fekrah.halan.driver.FloatingService;
@@ -1284,7 +1287,7 @@ public class MainActivityDriver extends LocationBaseActivity implements OnMapRea
                 mCountDownTimer.cancel();
                 mCountDownTimer = null;
             }
-            if (orderListener != null&&orderRef!=null)
+            if (orderListener != null && orderRef != null)
                 orderRef.removeEventListener(orderListener);
             finish();
         }
@@ -1297,14 +1300,11 @@ public class MainActivityDriver extends LocationBaseActivity implements OnMapRea
         int id = item.getItemId();
         if (id == R.id.nav_chats) {
             startActivity(new Intent(this, ChatsRoomsDriverActivity.class));
-        }
-//
-//
-// else if (id == R.id.nav_edit) {
-//            startActivity(new Intent(this, EditProfileActivity.class));
-//        }
-//
-        else if (id == R.id.nav_log_out) {
+        } else if (id == R.id.nav_account) {
+            startActivity(new Intent(this, MyAccountActivity.class));
+        } else if (id == R.id.nav_more) {
+            startActivity(new Intent(this, MoreDetailsActivity.class));
+        }  else if (id == R.id.nav_log_out) {
             logout = true;
             if (mCountDownTimer != null) {
                 mCountDownTimer.cancel();
@@ -1340,7 +1340,7 @@ public class MainActivityDriver extends LocationBaseActivity implements OnMapRea
 //            startActivity(new Intent(this, BalanceActivity.class));
 //        }
 //
- else if (id == R.id.nav_old_orders) {
+        else if (id == R.id.nav_old_orders) {
             startActivity(new Intent(this, OldOrdersDriverActivity.class));
         }
 

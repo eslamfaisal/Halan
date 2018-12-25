@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">حالاً</string>
+    <string name="app_name">حالا</string>
     <string name="choose_another_place">أختر مكان غير موقعك</string>
     <string name="cost">التكلفة</string>
     <string name="distance">المسافة</string>
@@ -9,7 +8,7 @@
     <string name="egypt">مصر</string>
     <string name="saudi_arabia">السعودية</string>
     <string name="my_location">موقعى</string>
-    <string name="send_order">Send Order</string>
+    <string name="send_order">ارسال الطلب</string>
 
     // login activity
     <string name="login">تسجيل الدخول</string>
@@ -17,9 +16,11 @@
     <string name="password">الرقم السري</string>
     <string name="forgot_password">نسيت الرقم السري</string>
     <string name="email">البريد</string>
+
     <string name="name">الاسم</string>
     <string name="phone">المحمول</string>
     <string name="register">تسجيل</string>
+
     <string name="sample_mail_id">name@example.com</string>
     <string name="password_size">يجب ان يكون الرقم السري اكثر من 6 احرف</string>
     <string name="password_txt">******</string>
@@ -27,15 +28,15 @@
     <string name="something_went_wrong_net">Something went wrong, Please check internet connection.</string>
     <string name="oops_connect_your_internet">Oops ! Connect your Internet.</string>
     <string name="server_down">Unable to reach server.</string>
-    <string name="please_try_again">Please try again.</string>
-    <string name="email_validation">Enter your email ID.</string>
-    <string name="not_valid_email">Not a valid email ID.</string>
-    <string name="password_validation">Password could not be left empty.</string>
-    <string name="first_name_empty">First name required.</string>
-    <string name="last_name_empty">Last name required.</string>
-    <string name="mobile_number_empty">Mobile number required.</string>
-    <string name="first_name_no_number">Name Not match</string>
-    <string name="check_email_or_password">check email and password</string>
+    <string name="please_try_again">برجاء المحاولة مرة اخري</string>
+    <string name="email_validation">برجاء ادخال البريد الالركتروني</string>
+    <string name="not_valid_email">البريد ليس صالح</string>
+    <string name="password_validation">لا يمكن ترك كلمة المرور فارغة</string>
+    <string name="first_name_empty">الاسم الاول مطلوب</string>
+    <string name="last_name_empty">الاسم الاخير مطلوب</string>
+    <string name="mobile_number_empty">رقم الهاتف مطلوب</string>
+    <string name="first_name_no_number">الاسم لا يتطابق </string>
+    <string name="check_email_or_password">برجاء التحقق من البريد وكلمة المرور</string>
 
     <string name="enter_your_email_to_reset">ادخل الايميل للاستعادة</string>
     <string name="reset">ارسال</string>
@@ -51,8 +52,6 @@
     <string name="order_details">تفاصيل الطلب</string>
 
     <string name="notes">ملاحظات</string>
-
-
     <string name="next">التالى</string>
     <string name="arrival_area">مكان الوصول</string>
     <string name="receiver_place">مكان الاستقبال</string>
@@ -95,9 +94,7 @@
     <string name="write_message">اكتب رساله</string>
     <string name="current_order">الطلب الحالى</string>
     <string name="chats">الدردشات</string>
-
-
-
+    <string name="car_model">موديل السيارة</string>
     <string name="cost_of_purchases">تكلفة المشتريات : </string>
     <string name="delivery_cost">تكلفة التوصيل :</string>
     <string name="total_cost">التكلفة الكليه :</string>
@@ -128,44 +125,77 @@
     <string name="current_trip">الرحلة الحاليه</string>
     <string name="trip_cost">تكلفة الرحلة:</string>
     <string name="profile_picture">الصورة الشخصية</string>
-    <string name="do_finish_order">Do you want to  finish th order</string>
-    <string name="new_order">New Order</string>
-    <string name="charge_balance">Please recharge the balance</string>
-    <string name="finish">Finish</string>
-    <string name="order_refused">Order refused</string>
-    <string name="online">Online</string>
-    <string name="offline">Offline</string>
-    <string name="accept_offer">Accept offer</string>
-    <string name="direction_to_client_location">Driection to the client</string>
-    <string name="direction_to_arrival">Direction to Arrival</string>
-    <string name="back_to_main">back to main</string>
-    <string name="city">City</string>
-    <string name="national_id">National id</string>
-    <string name="car_id">Car id</string>
-    <string name="car_color">Car color</string>
-    <string name="car_model">Car model</string>
-    <string name="car_form_picture">Car form</string>
-    <string name="car_licence_picture">Car licence</string>
-    <string name="picture_for_the_car_from_the_front">Front car Picture</string>
-    <string name="picture_of_the_back_of_the_car">Car back Front</string>
-    <string name="city_required">City is required</string>
-    <string name="no_internet_connection">No internetConnection</string>
-    <string name="old_orders">Old Orders</string>
-    <string name="balance">Balance</string>
-    <string name="login_as_driver">Login as driver</string>
-    <string name="no_dirver">No drivers with this email</string>
+    <string name="do_finish_order">هل انت تريد انهاء الطلب؟</string>
+    <string name="new_order">طلب جديد</string>
+    <string name="charge_balance">برجاء شحن الرصيد</string>
+    <string name="finish">انهاء</string>
+    <string name="order_refused">تم رفض الطلب</string>
+    <string name="online">نشط</string>
+    <string name="offline">غير نشط</string>
+    <string name="direction_to_client_location">الاتجاهات الى مكان العميل</string>
+    <string name="direction_to_arrival">الاتجاهات الى مكان الشراء</string>
+    <string name="back_to_main">الذهاب اللى الرئيسية</string>
+    <string name="city">المدينة</string>
+    <string name="national_id">الرقم القومي</string>
+    <string name="car_id">رقم السيارة</string>
+    <string name="car_form_picture">صورة استمارة السيارة</string>
+    <string name="car_licence_picture">صورة لرخصة السيارة</string>
+    <string name="car_color">لون السيارة</string>
+    <string name="picture_of_the_back_of_the_car">صورة للسيارة من الخلف</string>
+    <string name="picture_for_the_car_from_the_front">صورة للسيارة من الامام</string>
+    <string name="city_required">مدينتك مطلوبة</string>
+    <string name="national_id_required">الرقم القومي مطلوب</string>
+    <string name="car_Id_required">رقم السيارة مطلوب</string>
+    <string name="car_color_required">لون السيارة مطلوب</string>
+    <string name="create_new_account">إنشاء حساب جديد</string>
+    <string name="car_model_required">موديل السيارة مطلوب</string>
+    <string name="car_form_required">صورة استمارة السيارة مطلوبة</string>
+    <string name="front_car_pic_required">صورة للسيارة من الخلف مطلوبة</string>
+    <string name="license_pic_required">صورة لرخصةالسيارة مطلوبة</string>
+    <string name="back_car_required">صورة للسيارة من الخلف مطلوبة</string>
+    <string name="profile_image_required">Profile Image required</string>
+    <string name="no_internet_connection">لا يوجد اتصال بالانترنت</string>
+    <string name="old_orders">الطلبات المنتهية</string>
+    <string name="balance">الرصيد</string>
+    <string name="login_as_driver">تسجيل الدخول كسائق</string>
+    <string name="no_dirver">لا يوجد ساءق بهذا البريد</string>
     <string name="arabic">عربي</string>
-    <string name="receipt">Receipt</string>
-    <string name="sent">Sent</string>
-    <string name="send_receipt">Send receipt</string>
-    <string name="send_img">Send image</string>
-    <string name="purchases_cost_in_sr">Purchases Cost</string>
-    <string name="receipt_picture">Receipt Picture</string>
-    <string name="delivery_cost_in_sr">Delivery Cost</string>
-    <string name="more">More</string>
-    <string name="my_account">My account</string>
-    <string name="my_orders">My Orders</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="finished_orders">Finished orders</string>
-    <string name="canceled_order">Canceled orders</string>
+    <string name="receipt">فاتورة</string>
+    <string name="sent">تم الارسال</string>
+    <string name="send_receipt">ارسال فاتورة</string>
+    <string name="send_img">ارسال صورة</string>
+    <string name="purchases_cost_in_sr">تكلفة المشتريات</string>
+    <string name="receipt_picture">صورة الفاتورة</string>
+    <string name="delivery_cost_in_sr">تكلفة التوصيل</string>
+    <string name="more">المزيد</string>
+    <string name="my_account">حسابي</string>
+    <string name="my_orders">طلباتي</string>
+    <string name="title_notifications">الاشعارات</string>
+    <string name="finished_orders">الطلبات المنتهية</string>
+    <string name="canceled_order">الطلبات الملغية</string>
+    <string name="contacts">وسائل الاتصال</string>
+    <string name="instagram_account">حساب انستاجرام</string>
+    <string name="snapchat_account">حساب سناب شات</string>
+    <string name="twitter_account">حساب تويتر</string>
+    <string name="facebook_account">حساب فيس بوك</string>
+    <string name="Bank_accounts">الحسابات البنكية</string>
+    <string name="services_account">حساب الخدمات</string>
+    <string name="account_iban">حساب IBAN</string>
+    <string name="saudi_arabia_bank">Saudi arabia bank</string>
+    <string name="account_number">رقم الحساب</string>
+    <string name="saudi_bank">البنك السعودي</string>
+    <string name="alriad_bank">بنك الرياض</string>
+    <string name="alriad_gada_bank">alriad_gada_bank</string>
+    <string name="alriad__gada_bank">الرياض جدة بنك</string>
+    <string name="getting_locations">...جار جلب الموقع </string>
+    <string name="terms_and_conditions">الشروط والاحكام</string>
+    <string name="send_complain">ارسال شكوى</string>
+    <string name="payment">السداد</string>
+    <string name="privacy">سياسة الخصوصة</string>
+    <string name="info">عن التطبيق</string>
+    <string name="help">مساعدة</string>
+    <string name="subject">الموضوع</string>
+    <string name="send">ارسال</string>
+    <string name="please_sign_in_first">Please sign in first</string>
+
 </resources>

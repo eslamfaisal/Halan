@@ -1,8 +1,17 @@
 package com.fekrah.halan.customer.activities;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,8 +23,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.fekrah.halan.R;
+import com.fekrah.halan.models.Notification;
 import com.fekrah.halan.models.OldOrder;
 import com.fekrah.halan.models.Order;
 import com.fekrah.halan.models.OrderResponse;
@@ -260,6 +274,7 @@ public class CurrentOrderActivity extends AppCompatActivity {
                 if (dataSnapshot.getValue() != null) {
                     emptyOrder.setVisibility(View.GONE);
                     OrderResponse driver = dataSnapshot.getValue(OrderResponse.class);
+                    createNotify(driver.getDriver_name(), driver.getDriver_image(), "تم قبول الطلب", "customer_accept", 64);
                     acceptedDriverKey = driver.getDriver_key();
                     SimpleDraweeView profileImage;
                     TextView userName;
@@ -296,6 +311,21 @@ public class CurrentOrderActivity extends AppCompatActivity {
                     time.setText(driver.getEdtimated_time());
                     distance.setText(driver.getDistance());
                     acceptedDriverView.setVisibility(View.VISIBLE);
+                    Notification notification = new Notification(
+                            driver.getDriver_image(),
+                            "تم قبول طلبك",
+                            driver.getDriver_name()
+                    );
+
+                    String key = FirebaseDatabase.getInstance().getReference().push().getKey();
+                    FirebaseDatabase.getInstance().getReference().child("customer_notification")
+                            .child(FirebaseAuth.getInstance().getUid())
+                            .child(key).setValue(notification).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Log.d(TAG, "onComplete: ");
+                        }
+                    });
                 } else {
 
                     acceptedDriverView.setVisibility(View.GONE);
@@ -325,13 +355,73 @@ public class CurrentOrderActivity extends AppCompatActivity {
                         .child(FirebaseAuth.getInstance().getUid()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             finishTheOrder();
                         }
 
                     }
                 });
             }
+        });
+
+    }
+
+    public void createNotify(final String name, String img, final String content, final String id, final int id2) {
+
+//        Intent notifyIntent = new Intent(this, MainActivityDriver.class);
+//        notifyIntent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+//        notifyIntent.putExtra("seen", true);
+        // Create the PendingIntent
+//        final PendingIntent notifyPendingIntent = PendingIntent.getActivity(
+//                this, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT
+//        );
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+
+            NotificationChannel channel = new NotificationChannel(id, "accept Order", importance);
+            channel.setDescription("Notifications for accepting orders ");
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+
+        final Bitmap[] theBitmap = {null};
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions.placeholder(R.drawable.ic_dummy_user);
+        requestOptions.error(R.drawable.ic_dummy_user);
+        Glide.with(getApplicationContext()).asBitmap().
+                load(img).into(new SimpleTarget<Bitmap>(90, 90) {
+            @Override
+            public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                theBitmap[0] = resource;
+                CharSequence charSequence = (CharSequence) content;
+                NotificationCompat.Style d = new NotificationCompat.BigTextStyle()
+                        .bigText(charSequence);
+
+                NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(CurrentOrderActivity.this, id)
+                        .setSmallIcon(R.drawable.shoppingcart)
+                        .setContentTitle(name)
+                        .setLargeIcon(resource)
+                        .setContentText(content)
+                        .setStyle(d)
+                        .setColor(ContextCompat.getColor(CurrentOrderActivity.this, R.color.colorPrimary))
+                        //  .setContentIntent(notifyPendingIntent)
+                        .setAutoCancel(true)
+                        .setColorized(true)
+                        .setVibrate(new long[]{1000, 100, 1000, 100})
+                        .setAutoCancel(true)
+                        .setSound(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.new_order))
+                        .setPriority(NotificationCompat.PRIORITY_HIGH);
+
+                NotificationManagerCompat notificationManager = NotificationManagerCompat.from(CurrentOrderActivity.this);
+
+                notificationManager.notify(id2, mBuilder.build());
+
+            }
+
         });
 
     }
@@ -349,8 +439,8 @@ public class CurrentOrderActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private OldOrder createOldOrder(){
-        return  new OldOrder(
+    private OldOrder createOldOrder() {
+        return new OldOrder(
                 order.getOrder_key(),
                 acceptedDriverKey,
                 order.getCost(),
@@ -362,6 +452,7 @@ public class CurrentOrderActivity extends AppCompatActivity {
                 order.getDetails()
         );
     }
+
     private void cancelTheOrder() {
         FirebaseDatabase.getInstance().getReference().child("customer_canceled_order").child(userId).push().setValue(createOldOrder()).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -381,7 +472,7 @@ public class CurrentOrderActivity extends AppCompatActivity {
         });
     }
 
-    private void finishTheOrder(){
+    private void finishTheOrder() {
         FirebaseDatabase.getInstance().getReference().child("customer_finished_order").child(userId).push().setValue(createOldOrder()).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
